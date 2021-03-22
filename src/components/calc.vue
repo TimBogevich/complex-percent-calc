@@ -14,8 +14,9 @@
       <v-flex class="chart" xs11 md5>
         <apexchart width="100%" height="100%" type="line" :options="chartOptions" :series="totalSerices"></apexchart>
       </v-flex>
-      <v-flex xs11 md11 class="mt-4">
+      <v-flex xs11 md12 lg10 xl6 class="mt-4">
         <v-data-table
+          dense
           :mobile-breakpoint="0"
           :headers="headers"
           :items="tableValues"
@@ -31,7 +32,7 @@
 <script>
   import slider from "./slider"
 
-  const delimiter = (val) => val.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')
+  const delimiter = (val) => val.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
 
   
   export default {
@@ -49,7 +50,7 @@
         headers: [
           { text: 'Год', align: 'start', value: 'year'},
           { text: 'Доходы в месяц', value: 'income' },
-          { text: 'Расходы...', value: 'expenses' },
+          { text: 'Расходы', value: 'expenses' },
           { text: 'Доходы минус расходы', value: 'profit' },
           { text: 'Аккумулированый капитал ', value: 'currYearProfit' },
           { text: 'Капитал прошлого года', value: 'prevYearCapital' },
