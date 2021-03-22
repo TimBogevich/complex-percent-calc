@@ -14,7 +14,7 @@
       <v-flex style="heigth: 100px;" xs11 md5>
         <apexchart width="100%" height="100%" type="line" :options="chartOptions" :series="totalSerices"></apexchart>
       </v-flex>
-      <v-flex xs11 md11>
+      <v-flex xs11 md11 class="mt-4">
         <v-data-table
           :mobile-breakpoint="0"
           :headers="headers"
@@ -95,7 +95,8 @@
             prevYearCapital : delimiter(Math.round(d.prevYearCapital)), 
             percentOnPrevCapital : delimiter(Math.round(d.percentOnPrevCapital)), 
             percentOnCurrentYearProfit : delimiter(Math.round(d.percentOnCurrentYearProfit)), 
-            total : Math.round(d.total), 
+            total : delimiter(Math.round(d.total)), 
+            totalInt : Math.round(d.total), 
           }
         })
         return data
@@ -103,7 +104,7 @@
       totalSerices() {
         return [{
             name: "Итоговый капитал",
-            data: this.tableValues.map(i => i.total)
+            data: this.tableValues.map(i => i.totalInt)
         }]
       },
       chartOptions() {
@@ -125,8 +126,6 @@
               style: {
                 fontSize:  '14px',
                 fontWeight:  'bold',
-                fontFamily:  undefined,
-                color:  '#c7d0d9'
               },
             },
             grid: {
@@ -137,18 +136,17 @@
             },
             xaxis: {
               categories: ["1","2","3","4","5","6","7","8","9", "10", "11", "12", "13", "14", "15"],
+              title: {
+                  text: "Год",
+              },
               labels: {
                 style: {
-                    colors: '#c7d0d9'
                 },
               }
             },
             yaxis: {
               labels: {
                 formatter: (val) =>  delimiter(val),
-                style: {
-                    colors: '#c7d0d9'
-                  },
               },
             },
             markers: {
