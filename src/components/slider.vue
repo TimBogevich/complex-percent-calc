@@ -12,6 +12,7 @@
     class="mb-5"
     v-model="vl" 
     :max="max"
+    :lazy="true"
     :min="min"
     @change="$emit('update:vl', vl)"
     :step="step"
@@ -23,7 +24,7 @@
 <script>
 
   import VueSlider from 'vue-slider-component'
-  import 'vue-slider-component/theme/material.css'
+  import 'vue-slider-component/theme/default.css'
 
   export default {
     components: {
@@ -41,9 +42,5 @@
  .percent {
    width: 20px;
  }
-
-.vue-slider-dot {
-    z-index: 0 !important;
-}
 
 </style>
