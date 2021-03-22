@@ -11,7 +11,7 @@
         :step="item.step"
         :vl.sync="item.val" />
       </v-flex>
-      <v-flex style="heigth: 100px;" xs11 md5>
+      <v-flex class="chart" xs11 md5>
         <apexchart width="100%" height="100%" type="line" :options="chartOptions" :series="totalSerices"></apexchart>
       </v-flex>
       <v-flex xs11 md11 class="mt-4">
@@ -42,9 +42,9 @@
           {label : "Стартовый капитал", val : 500000, min: 50000, max: 5000000, step: 10000, type: "money"},
           {label : "Доходы / мес сейчас", val : 100000, min: 10000, max: 300000, step: 1000, type: "money"},
           {label : "Расходы мес / сейчас", val : 70000, min: 10000, max: 100000, step: 1000, type: "money"},
-          {label : "Ожидаемый прирост доходов / год", val : 7, min: 1, max: 100, step: 1, type: "percentage"},
-          {label : "Ставка % ваших инвестиций", val : 4, min: 1, max: 40, step: 1, type: "percentage"},
-          {label : "Инфляция", val : 4, min: 1, max: 40, step: 1, type: "percentage"},
+          {label : "Прирост доходов / год, %", val : 7, min: 1, max: 100, step: 1, type: "percentage"},
+          {label : "Ставка ваших инвестиций, %", val : 4, min: 1, max: 40, step: 1, type: "percentage"},
+          {label : "Инфляция, %", val : 4, min: 1, max: 40, step: 1, type: "percentage"},
         ],
         headers: [
           { text: 'Год', align: 'start', value: 'year'},
@@ -168,5 +168,7 @@
 </script>
 
 <style lang="scss" scoped>
-
+.chart {
+  min-height: 400px;
+}
 </style>

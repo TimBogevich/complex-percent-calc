@@ -5,8 +5,8 @@
         {{lbl}}
       </span>
       <v-spacer></v-spacer>
-      <currency-input v-if="type=='money'" currency="RUB"  :precision="0" @change="$emit('update:vl', vl)" v-model="vl"/>
-      <currency-input v-else :currency="null"  :precision="0" @change="$emit('update:vl', vl)" v-model="vl"/>
+      <currency-input class="currency" v-if="type=='money'" currency="RUB"  :precision="0" @change="$emit('update:vl', vl)" v-model="vl"/>
+      <currency-input class="percent" v-else :currency="null"  :precision="0" @change="$emit('update:vl', vl)" v-model="vl"/>
     </v-row>
     <v-slider v-model="vl"
     :max="max"
@@ -25,5 +25,10 @@
 </script>
 
 <style lang="scss" scoped>
-
+ .currency {
+   width: 105px;
+ }
+ .percent {
+   width: 20px;
+ }
 </style>
