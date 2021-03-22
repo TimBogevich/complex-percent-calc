@@ -5,7 +5,7 @@
       color="primary"
       dark
     >
-     <h3>Сложный процент</h3>
+     <v-app-bar-title>Сложный процент</v-app-bar-title>
     </v-app-bar>
 
     <v-main>

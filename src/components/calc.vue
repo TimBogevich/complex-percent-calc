@@ -110,7 +110,9 @@
       chartOptions() {
         return {
             chart: {
-              
+              toolbar: {
+                show: false
+              },
               type: 'line',
               zoom: {
                 enabled: false
