@@ -23,7 +23,7 @@
 <script>
 
   import VueSlider from 'vue-slider-component'
-  import 'vue-slider-component/theme/antd.css'
+  import 'vue-slider-component/theme/material.css'
 
   export default {
     components: {
@@ -42,6 +42,8 @@
    width: 20px;
  }
 
-
+.vue-slider-dot {
+    z-index: 0 !important;
+}
 
 </style>
