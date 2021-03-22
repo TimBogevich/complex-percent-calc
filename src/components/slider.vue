@@ -8,17 +8,27 @@
       <currency-input class="currency" v-if="type=='money'" currency="RUB"  :precision="0" @change="$emit('update:vl', vl)" v-model="vl"/>
       <currency-input class="percent" v-else :currency="null"  :precision="0" @change="$emit('update:vl', vl)" v-model="vl"/>
     </v-row>
-    <v-slider v-model="vl"
+    <vue-slider 
+    class="mb-5"
+    v-model="vl" 
     :max="max"
     :min="min"
     @change="$emit('update:vl', vl)"
-    :step="step">
-    </v-slider>
+    :step="step"
+    />
+
   </div>
 </template>
 
 <script>
+
+  import VueSlider from 'vue-slider-component'
+  import 'vue-slider-component/theme/antd.css'
+
   export default {
+    components: {
+      VueSlider
+    },
     props : ["vl", "lbl", "min", "max", "step", "type"]
     
   }
@@ -31,4 +41,7 @@
  .percent {
    width: 20px;
  }
+
+
+
 </style>
