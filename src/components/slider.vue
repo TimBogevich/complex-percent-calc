@@ -6,7 +6,7 @@
       </span>
       <v-spacer></v-spacer>
       <currency-input class="currency" v-if="type=='money'" currency="RUB"  :precision="0" @change="$emit('update:vl', vl)" v-model="vl"/>
-      <currency-input class="percent" v-else :currency="null"  :precision="0" @change="$emit('update:vl', vl)" v-model="vl"/>
+      <currency-input class="currency" v-else :currency="null"  :precision="0" @change="$emit('update:vl', vl)" v-model="vl"/>
     </v-row>
     <vue-slider 
     class="mb-5"
@@ -30,17 +30,25 @@
     components: {
       VueSlider
     },
-    props : ["vl", "lbl", "min", "max", "step", "type"]
-    
+    props : ["vl", "lbl", "min", "max", "step", "type"],
+    data() {
+      return {
+        options() {
+          return {
+            distractionFree: false,
+            valueAsInteger: true,
+            autoDecimalMode: true
+          };
+        },
+      }
+    },
   }
 </script>
 
 <style lang="scss" scoped>
  .currency {
    width: 105px;
- }
- .percent {
-   width: 20px;
+   text-align: end !important;
  }
 
 </style>

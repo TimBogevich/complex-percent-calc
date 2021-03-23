@@ -52,7 +52,7 @@
           { text: 'Доходы в месяц', value: 'income', align: 'end'},
           { text: 'Расходы', value: 'expenses', align: 'end'},
           { text: 'Доходы минус расходы', value: 'profit', align: 'end'},
-          { text: 'Аккумулированый капитал ', value: 'currYearProfit', align: 'end'},
+          { text: 'Накопленный капитал текущий год ', value: 'currYearProfit', align: 'end'},
           { text: 'Капитал прошлого года', value: 'prevYearCapital', align: 'end'},
           { text: '% на капитал прошлого года', value: 'percentOnPrevCapital', align: 'end'},
           { text: '% Капитал текущего года', value: 'percentOnCurrentYearProfit', align: 'end'},
