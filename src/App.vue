@@ -5,7 +5,9 @@
       color="primary"
       dark
     >
-     <v-app-bar-title>Сложный процент</v-app-bar-title>
+      <v-flex xs6>
+        <span class=".text-xl-h4">Калькулятор сложного процента</span>  
+      </v-flex>
     </v-app-bar>
 
     <v-main>
