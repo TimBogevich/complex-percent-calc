@@ -43,9 +43,9 @@
             {id : "startCapital", val : 500000, min: 50000, max: 5000000, step: 10000, type: "money"},
             {id : "income", val : 100000, min: 10000, max: 300000, step: 1000, type: "money"},
             {id : "expenses", val : 70000, min: 10000, max: 100000, step: 1000, type: "money"},
-            {id : "growExpected", val : 7, min: 1, max: 100, step: 1, type: "percentage"},
-            {id : "investPercentage", val : 4, min: 1, max: 40, step: 1, type: "percentage"},
-            {id : "inflation", val : 4, min: 1, max: 40, step: 1, type: "percentage"},
+            {id : "growExpected", val : 7, min: 0, max: 100, step: 1, type: "percentage"},
+            {id : "investPercentage", val : 4, min: 0, max: 40, step: 1, type: "percentage"},
+            {id : "inflation", val : 4, min: 0, max: 40, step: 1, type: "percentage"},
           ]
       
       }
