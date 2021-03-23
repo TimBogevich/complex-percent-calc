@@ -14,7 +14,7 @@
       <v-flex class="chart" xs11 md5>
         <apexchart width="100%" height="100%" type="line" :options="chartOptions" :series="totalSerices"></apexchart>
       </v-flex>
-      <v-flex xs11 md12 lg10 xl6 class="mt-4">
+      <v-flex xs11 md12 lg10 xl6 class="mt-4 mb-4">
         <v-data-table
           dense
           :mobile-breakpoint="0"
