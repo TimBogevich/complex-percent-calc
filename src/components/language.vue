@@ -1,16 +1,13 @@
 <template>
   <v-menu>
     <template v-slot:activator="{ on, attrs }">
-      <v-list-item id="lang"  link v-bind="attrs" v-on="on">
-        <v-list-item-icon>
-          <flag :iso="selectedLang.flag" />
-        </v-list-item-icon>
-        <v-list-item-content class="justify-content-end">
-          <v-list-item-title>
-            <span class="ml-1">{{ selectedLang.name }}</span>
-          </v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
+        <v-btn
+          text
+          v-bind="attrs"
+          v-on="on"
+        >
+          <flag :iso="selectedLang.flag" v-bind="attrs" v-on="on" />
+        </v-btn>
     </template>
     <v-list>
       <v-list-item

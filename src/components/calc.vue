@@ -60,16 +60,6 @@
             investPercentage : this.$t("investPercentage"),
             inflation : this.$t("inflation"),
         }
-      },
-      params() {
-        return [
-          {label : this.$t("startCapital"), val : 500000, min: 50000, max: 5000000, step: 10000, type: "money"},
-          {label : this.$t("income"), val : 100000, min: 10000, max: 300000, step: 1000, type: "money"},
-          {label : this.$t("expenses"), val : 70000, min: 10000, max: 100000, step: 1000, type: "money"},
-          {label : this.$t("growExpected"), val : 7, min: 1, max: 100, step: 1, type: "percentage"},
-          {label : this.$t("investPercentage"), val : 4, min: 1, max: 40, step: 1, type: "percentage"},
-          {label : this.$t("inflation"), val : 4, min: 1, max: 40, step: 1, type: "percentage"},
-        ]
       }, 
       headers()  {
         return [

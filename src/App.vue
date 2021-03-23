@@ -6,7 +6,7 @@
       dark
     >
       <v-flex xs6>
-        <span class=".text-xl-h4">
+        <span class=".text-xl-h3">
           {{$t("title")}}
         </span>  
       </v-flex>
