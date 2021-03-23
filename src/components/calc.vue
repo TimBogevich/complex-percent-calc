@@ -37,30 +37,30 @@
   
   export default {
     components : {slider},
-    data() {
-      return {
-        params : [
-          {label : "Стартовый капитал", val : 500000, min: 50000, max: 5000000, step: 10000, type: "money"},
-          {label : "Доходы / мес сейчас", val : 100000, min: 10000, max: 300000, step: 1000, type: "money"},
-          {label : "Расходы мес / сейчас", val : 70000, min: 10000, max: 100000, step: 1000, type: "money"},
-          {label : "Прирост доходов / год, %", val : 7, min: 1, max: 100, step: 1, type: "percentage"},
-          {label : "Ставка ваших инвестиций, %", val : 4, min: 1, max: 40, step: 1, type: "percentage"},
-          {label : "Инфляция, %", val : 4, min: 1, max: 40, step: 1, type: "percentage"},
-        ],
-        headers: [
-          { text: 'Год', align: 'end', value: 'year'},
-          { text: 'Доходы в месяц', value: 'income', align: 'end'},
-          { text: 'Расходы', value: 'expenses', align: 'end'},
-          { text: 'Доходы минус расходы', value: 'profit', align: 'end'},
-          { text: 'Накопленный капитал текущий год ', value: 'currYearProfit', align: 'end'},
-          { text: 'Капитал прошлого года', value: 'prevYearCapital', align: 'end'},
-          { text: '% на капитал прошлого года', value: 'percentOnPrevCapital', align: 'end'},
-          { text: '% Капитал текущего года', value: 'percentOnCurrentYearProfit', align: 'end'},
-          { text: 'Итоговый капитал', value: 'total', align: 'end'},
-        ],
-      }
-    },
     computed: {
+      params() {
+        return [
+          {label : this.$t("startCapital"), val : 500000, min: 50000, max: 5000000, step: 10000, type: "money"},
+          {label : this.$t("income"), val : 100000, min: 10000, max: 300000, step: 1000, type: "money"},
+          {label : this.$t("expenses"), val : 70000, min: 10000, max: 100000, step: 1000, type: "money"},
+          {label : this.$t("growExpected"), val : 7, min: 1, max: 100, step: 1, type: "percentage"},
+          {label : this.$t("investPercentage"), val : 4, min: 1, max: 40, step: 1, type: "percentage"},
+          {label : this.$t("inflation"), val : 4, min: 1, max: 40, step: 1, type: "percentage"},
+        ]
+      }, 
+      headers()  {
+        return [
+          { text: this.$t("year"), align: 'end', value: 'year'},
+          { text: this.$t("incomeMounth"), value: 'income', align: 'end'},
+          { text: this.$t("expenses"), value: 'expenses', align: 'end'},
+          { text: this.$t("profit"), value: 'profit', align: 'end'},
+          { text: this.$t("currYearProfit"), value: 'currYearProfit', align: 'end'},
+          { text: this.$t("prevYearCapital"), value: 'prevYearCapital', align: 'end'},
+          { text: this.$t("percentOnPrevCapital"), value: 'percentOnPrevCapital', align: 'end'},
+          { text: this.$t("percentOnCurrentYearProfit"), value: 'percentOnCurrentYearProfit', align: 'end'},
+          { text: this.$t("total"), value: 'total', align: 'end'},
+        ]
+      },
       tableValues() {
         let data = []
         let prevYearCapital = this.params[0].val
@@ -104,7 +104,7 @@
       },
       totalSerices() {
         return [{
-            name: "Итоговый капитал",
+            name: this.$t("totalCapital"),
             data: this.tableValues.map(i => i.totalInt)
         }]
       },
@@ -124,7 +124,7 @@
               curve: 'straight'
             },
             title: {
-              text: 'График',
+              text: this.$t("chartTitle"),
               align: 'left',
               style: {
                 fontSize:  '14px',
@@ -140,7 +140,7 @@
             tooltip: {
               x: {
                   show: true,
-                  formatter: (val) => "Год " + val,
+                  formatter: (val) => this.$t("year") + val,
               },
               y: {
                   formatter: (seriesName) => delimiter(seriesName),
@@ -152,7 +152,7 @@
             xaxis: {
               categories: ["1","2","3","4","5","6","7","8","9", "10", "11", "12", "13", "14", "15"],
               title: {
-                  text: "Год",
+                  text: this.$t("year"),
               },
               labels: {
                 style: {

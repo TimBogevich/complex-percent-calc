@@ -1,0 +1,19 @@
+{
+  "chartTitle": "Kapitalveränderungen für die nächsten 15 Jahre",
+  "currYearProfit": "Kumuliertes Kapital des laufenden Jahres",
+  "expenses": "Ausgaben Monat / jetzt",
+  "growExpected": "Einkommenssteigerung / Jahr,%",
+  "income": "Einkommen / Monat jetzt",
+  "incomeMounth": "Einkommen pro Monat",
+  "inflation": "Inflation,%",
+  "investPercentage": "Ihre Investitionsquote,%",
+  "percentOnCurrentYearProfit": "% Kapital des laufenden Jahres",
+  "percentOnPrevCapital": "% auf die Hauptstadt des letzten Jahres",
+  "prevYearCapital": "Hauptstadt des letzten Jahres",
+  "profit": "Einnahmen abzüglich Ausgaben",
+  "startCapital": "Startkapital",
+  "title": "Zinseszinsrechner",
+  "total": "Gesamtkapital",
+  "totalCapital": "Gesamtkapital",
+  "year": "Jahr "
+}

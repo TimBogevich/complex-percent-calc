@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "i18n:report": "vue-cli-service i18n:report --src \"./src/**/*.?(js|vue)\" --locales \"./src/locales/**/*.json\""
   },
   "dependencies": {
     "apexcharts": "^3.26.0",
@@ -12,10 +13,14 @@
     "vue": "^2.6.11",
     "vue-apexcharts": "^1.6.0",
     "vue-currency-input": "^1.22.6",
+    "vue-flag-icon": "^1.0.6",
+    "vue-i18n": "^8.24.2",
     "vue-router": "^3.2.0",
     "vue-slider-component": "^3.2.11",
     "vuetify": "^2.4.0",
-    "vuex": "^3.4.0"
+    "vuex": "^3.4.0",
+    "vuex-pathify": "^1.4.5",
+    "vuex-persistedstate": "^4.0.0-beta.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -24,6 +29,7 @@
     "@vue/cli-service": "~4.5.0",
     "sass": "^1.32.0",
     "sass-loader": "^10.0.0",
+    "vue-cli-plugin-i18n": "~2.0.2",
     "vue-cli-plugin-vuetify": "~2.3.1",
     "vue-template-compiler": "^2.6.11",
     "vuetify-loader": "^1.7.0"

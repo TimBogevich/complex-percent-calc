@@ -1,0 +1,19 @@
+{
+  "title": "Compound interest calculator",
+  "startCapital": "Start-up capital",
+  "chartTitle": "Capital changes for the next 15 years",
+  "currYearProfit": "Accumulated capital current year",
+  "expenses": "Expenses month / now",
+  "growExpected": "Increase in income / year,%",
+  "income": "Income / month now",
+  "incomeMounth": "Income per month",
+  "inflation": "Inflation,%",
+  "investPercentage": "Your investment rate,%",
+  "percentOnCurrentYearProfit": "% Capital of the current year",
+  "percentOnPrevCapital": "% on the capital of the last year",
+  "prevYearCapital": "Capital of last year",
+  "profit": "Income minus expenses",
+  "total": "Total capital",
+  "totalCapital": "Total capital",
+  "year": "Year "
+}
