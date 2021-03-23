@@ -5,8 +5,8 @@
         {{lbl}}
       </span>
       <v-spacer></v-spacer>
-      <currency-input class="currency" v-if="type=='money'" :currency="null"  :precision="0" @change="$emit('update:vl', vl)" v-model="vl"/>
-      <currency-input class="percent" v-else :currency="null"  :precision="0" @change="$emit('update:vl', vl)" v-model="vl"/>
+      <currency-input class="inp currency" v-if="type=='money'" :currency="null"  :precision="0" @change="$emit('update:vl', vl)" v-model="vl"/>
+      <currency-input class="inp percent" v-else :currency="null"  :precision="0" @change="$emit('update:vl', vl)" v-model="vl"/>
     </v-row>
     <vue-slider 
     class="mb-5"
@@ -46,12 +46,21 @@
 </script>
 
 <style lang="scss" scoped>
+
+.inp {
+  border-style: solid;
+  border-color: silver;
+  border-width: 1px;
+  border-radius: 4px;
+  padding-right: 4px;
+}
+
  .currency {
    width: 105px;
    text-align: end !important;
  }
  .percent {
-   width: 20px;
+   width: 40px;
    text-align: end !important;
  }
 
