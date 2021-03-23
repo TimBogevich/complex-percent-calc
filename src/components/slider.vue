@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-row class=" justify-center mx-5 mb-3">
+    <v-row class=" justify-center mx-2 mb-3">
       <span >
         {{lbl}}
       </span>
