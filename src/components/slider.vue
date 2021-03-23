@@ -5,7 +5,7 @@
         {{lbl}}
       </span>
       <v-spacer></v-spacer>
-      <currency-input class="currency" v-if="type=='money'" currency="RUB"  :precision="0" @change="$emit('update:vl', vl)" v-model="vl"/>
+      <currency-input class="currency" v-if="type=='money'" :currency="null"  :precision="0" @change="$emit('update:vl', vl)" v-model="vl"/>
       <currency-input class="currency" v-else :currency="null"  :precision="0" @change="$emit('update:vl', vl)" v-model="vl"/>
     </v-row>
     <vue-slider 
