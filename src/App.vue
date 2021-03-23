@@ -11,9 +11,7 @@
         </span>  
       </v-flex>
       <v-spacer></v-spacer>
-      <v-flex xs1 md2>
-        <language />
-      </v-flex>
+      <language />
 
     </v-app-bar>
 
