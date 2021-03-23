@@ -5,8 +5,14 @@
         {{lbl}}
       </span>
       <v-spacer></v-spacer>
-      <currency-input class="inp currency" @keyup.enter.native="$event.target.blur()" v-if="type=='money'" :currency="null"  :precision="0" @change="$emit('update:vl', vl)" v-model="vl"/>
-      <currency-input class="inp percent" @keyup.enter.native="$event.target.blur()" v-else :currency="null"  :precision="0" @change="$emit('update:vl', vl)" v-model="vl"/>
+      <currency-input
+          :class="type=='money' ? 'inp currency' : 'inp percent'" 
+          @keyup.enter.native="$event.target.blur()" 
+          :currency="null"
+          locale="de"
+          :precision="0" 
+          @change="$emit('update:vl', vl)" 
+          v-model="vl"/>
     </v-row>
     <vue-slider 
     class="mb-5"
