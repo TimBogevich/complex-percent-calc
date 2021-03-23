@@ -54,8 +54,8 @@
       labels() {
         return {
             startCapital : this.$t("startCapital"),
-            income : this.$t("income"),
-            expenses : this.$t("expenses"),
+            income : this.$t("income") + " " + this.$t("now"),
+            expenses : this.$t("expenses") + " " + this.$t("now"),
             growExpected : this.$t("growExpected"),
             investPercentage : this.$t("investPercentage"),
             inflation : this.$t("inflation"),
