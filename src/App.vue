@@ -6,6 +6,7 @@
       dark
     >
       <v-flex xs6>
+        <v-icon>mdi-sack-percent</v-icon>
         <span class=".text-xl-h3">
           {{$t("title")}}
         </span>  
