@@ -8,7 +8,7 @@
       <v-flex xs6>
         <v-icon>mdi-sack-percent</v-icon>
         <span class=".text-xl-h3">
-          {{$t("title")}}
+          {{$t(title)}}
         </span>  
       </v-flex>
       <v-spacer></v-spacer>
@@ -17,14 +17,14 @@
     </v-app-bar>
 
     <v-main>
-      <Home/>
+      <router-view></router-view>
     </v-main>
   </v-app>
 </template>
 
 <script>
 import Home from './views/Home';
-import language from "./components/language"
+import language from "./components/lib/language"
 import {get,sync} from 'vuex-pathify'
 export default {
   name: 'App',
@@ -38,9 +38,9 @@ export default {
     //
   }),
   computed: {
-  },
-  created() {
-
+    title() {
+      return this.$route.meta.title
+    }
   },
 };
 </script>

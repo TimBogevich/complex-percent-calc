@@ -1,4 +1,5 @@
 {
+  "compoundPercent": "Zinseszinsrechner",
   "chartTitle": "Kapitalveränderungen für die nächsten 15 Jahre",
   "currYearProfit": "Kumuliertes Kapital des laufenden Jahres",
   "expenses": "Ausgaben pro Monat",
@@ -12,7 +13,6 @@
   "prevYearCapital": "Hauptstadt des letzten Jahres",
   "profit": "Einnahmen abzüglich Ausgaben",
   "startCapital": "Startkapital",
-  "title": "Zinseszinsrechner",
   "total": "Gesamtkapital",
   "totalCapital": "Gesamtkapital",
   "year": "Jahr ",

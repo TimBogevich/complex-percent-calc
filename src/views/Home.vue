@@ -6,7 +6,7 @@
 
 <script>
 // @ is an alias to /src
-import calc from '@/components/calc.vue'
+import calc from '@/components/compoundInterest.vue'
 
 export default {
   name: 'Home',

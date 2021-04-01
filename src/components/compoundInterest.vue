@@ -30,7 +30,7 @@
 </template>
 
 <script>
-  import slider from "./slider"
+  import slider from "./lib/slider"
 
   const delimiter = (val) => val.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
 

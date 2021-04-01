@@ -1,5 +1,6 @@
 {
-  "title": "Compound interest calculator",
+  "compoundPercent": "Compound interest calculator",
+  "loanCalculator": "Loan calculator",
   "startCapital": "Start-up capital",
   "chartTitle": "Capital changes for the next 15 years",
   "currYearProfit": "Accumulated capital current year",
