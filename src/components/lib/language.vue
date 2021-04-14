@@ -7,7 +7,7 @@
           v-on="on"
           style="font-size:20px"
         >
-          <flag class="elevation-10" :iso="selectedLang.flag" v-bind="attrs" v-on="on" />
+          <flag class="elevation-10 rounded-sm" :iso="selectedLang.flag" v-bind="attrs" v-on="on" />
         </v-btn>
     </template>
     <v-list>
