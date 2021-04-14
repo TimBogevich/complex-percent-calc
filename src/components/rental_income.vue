@@ -20,7 +20,7 @@
         >
           <v-list-item three-line>
             <v-list-item-content>
-              <v-list-item-title class="headline mb-1">
+              <v-list-item-title class="title-1 mb-1">
                 Rate of return per year
               </v-list-item-title>
             </v-list-item-content>
@@ -29,7 +29,7 @@
             class="font-weight-black text-xl-h4"
             :duration='1000'
              :value='roi'
-             :formatter='val => val.toFixed(2) + "%"'>
+             :formatter='val => val.toFixed(2) + " %"'>
               {{roi}}
              </tween>
           </v-list-item>
@@ -41,7 +41,7 @@
         >
           <v-list-item three-line>
             <v-list-item-content>
-              <v-list-item-title class="headline mb-1">
+              <v-list-item-title class="title-1 mb-1">
                 Return of investments
               </v-list-item-title>
             </v-list-item-content>
