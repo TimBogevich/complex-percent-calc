@@ -21,7 +21,6 @@
     :lazy="lazy"
     dotSize="20"
     :dragOnClick="true"
-    tooltip="hover"
     :min="min"
     @change="$emit('update:vl', vl)"
     :interval="step"
