@@ -1,7 +1,7 @@
 <template>
   <v-container grid-list-xs>
     <v-row class="mt-5 justify-center">
-      <v-flex class="justify-center" xs11 md5>
+      <v-flex class="justify-center" xs11 md4>
         <slider 
         v-for="(item, i) in params" :key="i"
         :lbl="labels[i]" 
@@ -11,10 +11,9 @@
         :step="item.step"
         :vl.sync="item.val"
         :lazy="false"/>
-      </v-flex>
-      <v-flex class="chart" xs11 md5>
+
         <v-card
-        class="ma-4"
+        class="mt-5"
           max-width="100%"
           outlined
         >
@@ -35,7 +34,7 @@
           </v-list-item>
         </v-card>
         <v-card
-        class="ma-4"
+        class="mt-4"
           max-width="100%"
           outlined
         >
@@ -50,7 +49,7 @@
             class="font-weight-black text-xl-h4"
             :duration='1000'
              :value='return_of_inv'
-             :formatter='val => val.toFixed(2) + " " + $t("years") '>
+             :formatter='val => val.toFixed(1) + " " + $t("years") '>
              </tween>
           </v-list-item>
         </v-card>
@@ -72,7 +71,7 @@
       return {
         params: {
           house_price:  {id : "house_price", val : 5000000, min: 50000, max: 50000000, step: 10000, type: "money"},
-          rental_income:  {id : "rental_income", val : 20000, min: 0, max: 300000, step: 1000, type: "money"},
+          rental_income:  {id : "rental_income", val : 20000, min: 500, max: 300000, step: 500, type: "money"},
         },
       
       }
