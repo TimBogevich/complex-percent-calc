@@ -4,7 +4,15 @@
       app
       color="primary"
       dark
+      src="https://picsum.photos/1920/1080?random"
+      scroll-target="#scrolling-techniques-2"
     >
+      <template v-slot:img="{ props }">
+        <v-img
+          v-bind="props"
+          gradient="to top right, rgba(19,84,122,.8), rgba(128,208,199,.9)"
+        ></v-img>
+      </template>
       <v-app-bar-nav-icon @click="navbar = !navbar" ></v-app-bar-nav-icon>
       <v-flex xs6>
         <v-icon>mdi-sack-percent</v-icon>
