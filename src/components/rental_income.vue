@@ -50,7 +50,7 @@
             class="font-weight-black text-xl-h4"
             :duration='1000'
              :value='return_of_inv'
-             :formatter='val => val.toFixed(2) + " years"'>
+             :formatter='val => val.toFixed(2) + " " + $t("years") '>
              </tween>
           </v-list-item>
         </v-card>
