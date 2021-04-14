@@ -16,5 +16,11 @@
   "total": "Gesamtkapital",
   "totalCapital": "Gesamtkapital",
   "year": "Jahr ",
-  "now": "jetzt"
+  "now": "jetzt",
+  "house_price": "Hauspreis",
+  "loanCalculator": "Lohnrechner",
+  "rentalIncome": "Rechner für Mieteinnahmen",
+  "rental_income": "Mietbetrag pro Monat",
+  "roi": "Kapitalrendite",
+  "ror": "Rendite pro Jahr"
 }

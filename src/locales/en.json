@@ -18,5 +18,9 @@
   "totalCapital": "Total capital",
   "year": "Year ",
   "now": "now",
-  "personalRisk" : "Personal Risk calculator"
+  "rentalIncome": "Rental income calculator",
+  "house_price": "House price",
+  "rental_income": "Rental amount per month",
+  "roi": "Return of investments",
+  "ror": "Rate of return per year"
 }

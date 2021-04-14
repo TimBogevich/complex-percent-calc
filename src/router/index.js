@@ -14,7 +14,7 @@ const routes = [
     path: '/rental_income',
     name: 'RentalIncome',
     component: () => import(/* webpackChunkName: "about" */ '../components/rental_income.vue'),
-    meta: { title: "personalRisk" },
+    meta: { title: "rentalIncome" },
   },
   {
     path: '/about',

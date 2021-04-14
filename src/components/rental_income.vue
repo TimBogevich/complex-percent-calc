@@ -21,7 +21,7 @@
           <v-list-item three-line>
             <v-list-item-content>
               <v-list-item-title class="title-1 mb-1">
-                Rate of return per year
+                {{$t("ror")}}
               </v-list-item-title>
             </v-list-item-content>
 
@@ -42,7 +42,7 @@
           <v-list-item three-line>
             <v-list-item-content>
               <v-list-item-title class="title-1 mb-1">
-                Return of investments
+                {{$t("roi")}}
               </v-list-item-title>
             </v-list-item-content>
 
