@@ -7,7 +7,7 @@
           v-on="on"
           style="font-size:20px"
         >
-          <flag class="elevation-10 rounded-sm" :iso="selectedLang.flag" v-bind="attrs" v-on="on" />
+          <flag class="elevation-10 rounded" :iso="selectedLang.flag" v-bind="attrs" v-on="on" />
         </v-btn>
     </template>
     <v-list>
@@ -17,7 +17,7 @@
         @click="setLocale(item.code)"
       >
         <v-list-item-title>
-          <flag :iso="item.flag" /> {{ item.name }}
+          <flag class="rounded-sm" :iso="item.flag" /> {{ item.name }}
         </v-list-item-title>
       </v-list-item>
     </v-list>

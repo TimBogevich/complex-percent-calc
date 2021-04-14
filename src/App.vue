@@ -15,7 +15,7 @@
       </template>
       <v-app-bar-nav-icon @click="navbar = !navbar" ></v-app-bar-nav-icon>
       <v-flex xs6>
-        <v-icon style="text-shadow: 3px 5px 13px #000">mdi-sack-percent</v-icon>
+        <v-icon style="text-shadow: 2px 3px 13px #000">mdi-sack-percent</v-icon>
         <span class=".text-xl-h3">
           {{$t(title)}}
         </span>  
