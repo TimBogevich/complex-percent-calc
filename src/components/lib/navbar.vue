@@ -45,15 +45,16 @@
   export default {
     data () {
       return {
-        items: [
-          { title: 'Compound interest', icon: 'mdi-chart-bell-curve', link: "/" },
-          { title: 'Rent income', icon: 'mdi-chart-bell-curve', link: "/rental_income" },
-        ],
         right: null,
       }
     },
     computed: {
       navbar: sync("navbar"),
+      items() { 
+        return [
+          { title: this.$t("compoundPercentT"), icon: 'mdi-chart-bell-curve', link: "/" },
+          { title: this.$t("rentalIncomeT"), icon: 'mdi-chart-bell-curve', link: "/rental_income" },
+        ]},
     }
   }
 </script>

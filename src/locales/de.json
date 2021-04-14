@@ -22,5 +22,7 @@
   "rentalIncome": "Rechner für Mieteinnahmen",
   "rental_income": "Mietbetrag pro Monat",
   "roi": "Kapitalrendite",
-  "ror": "Rendite pro Jahr"
+  "ror": "Rendite pro Jahr",
+  "compoundPercentT": "Zinseszins",
+  "rentalIncomeT": "Mieteinnahmen"
 }

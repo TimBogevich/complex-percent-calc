@@ -1,5 +1,6 @@
 {
   "compoundPercent": "Compound interest calculator",
+  "compoundPercentT": "Compound interest",
   "loanCalculator": "Loan calculator",
   "startCapital": "Start-up capital",
   "chartTitle": "Capital changes for the next 15 years",
@@ -19,6 +20,7 @@
   "year": "Year ",
   "now": "now",
   "rentalIncome": "Rental income calculator",
+  "rentalIncomeT": "Rental income",
   "house_price": "House price",
   "rental_income": "Rental amount per month",
   "roi": "Return of investments",
