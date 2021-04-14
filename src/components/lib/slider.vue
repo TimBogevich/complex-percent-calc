@@ -18,7 +18,7 @@
     class="mb-5"
     v-model="vl" 
     :max="max"
-    :lazy="true"
+    :lazy="lazy"
     :min="min"
     @change="$emit('update:vl', vl)"
     :step="step"
@@ -28,7 +28,7 @@
 </template>
 
 <script>
-
+  
   import VueSlider from 'vue-slider-component'
   import 'vue-slider-component/theme/default.css'
 
@@ -36,7 +36,19 @@
     components: {
       VueSlider
     },
-    props : ["vl", "lbl", "min", "max", "step", "type"],
+    props : {
+      vl: {},
+      lbl: {},
+      min: {},
+      max: {},
+      step: {},
+      type: {},
+      lazy: {
+        type: Boolean,
+        default: true
+      }
+
+    },
     data() {
       return {
         options() {

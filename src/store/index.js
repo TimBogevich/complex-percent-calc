@@ -9,6 +9,7 @@ pathify.options.mapping = 'standard'
 pathify.options.deep = 2
 
 const state = {
+  navbar: false,
   locale : null,
   langs: [
     {code :"en", name : "English", flag : "gb"},

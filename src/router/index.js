@@ -11,11 +11,10 @@ const routes = [
     meta: { title: "compoundPercent" },
   },
   {
-    path: '/loan',
-    name: 'Loan',
-    params: { title: "Loan calculator" },
-    component: () => import(/* webpackChunkName: "about" */ '../components/loanCalculator.vue'),
-    meta: { title: "loanCalculator" },
+    path: '/rental_income',
+    name: 'RentalIncome',
+    component: () => import(/* webpackChunkName: "about" */ '../components/rental_income.vue'),
+    meta: { title: "personalRisk" },
   },
   {
     path: '/about',
