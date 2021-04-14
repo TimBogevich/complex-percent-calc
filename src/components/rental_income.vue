@@ -71,8 +71,8 @@
     data() {
       return {
         params: {
-          house_price:  {id : "house_price", val : 5000000, min: 50000, max: 50000000, step: 100000, type: "money"},
-          rental_income:  {id : "rental_income", val : 20000, min: 0, max: 300000, step: 10000, type: "money"},
+          house_price:  {id : "house_price", val : 5000000, min: 50000, max: 50000000, step: 10000, type: "money"},
+          rental_income:  {id : "rental_income", val : 20000, min: 0, max: 300000, step: 1000, type: "money"},
         },
       
       }

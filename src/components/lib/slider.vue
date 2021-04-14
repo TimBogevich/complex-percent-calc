@@ -21,9 +21,10 @@
     :lazy="lazy"
     :min="min"
     @change="$emit('update:vl', vl)"
-    :step="step"
-    />
-
+    :interval="step"
+    :tooltip-formatter="delimiter"
+    >
+    </vue-slider >
   </div>
 </template>
 
@@ -31,6 +32,7 @@
   
   import VueSlider from 'vue-slider-component'
   import 'vue-slider-component/theme/default.css'
+
 
   export default {
     components: {
@@ -59,6 +61,9 @@
           };
         },
       }
+    },
+    methods: {
+      delimiter : (val) => val.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')
     },
   }
 </script>
