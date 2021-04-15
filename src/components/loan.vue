@@ -33,7 +33,9 @@
         />
       </v-flex>
       <v-flex class="chart" xs11 md5>
-        <lineChart title="loanT" :series="chartSeries"/>
+        <chartPie :series="pieChartSeries" :labels="pieLabels"/>
+        <lineChart title="loanT" :series="chartSeries"/> 
+
       </v-flex>
 
       <v-flex class="my-5" xs11 md7>
@@ -92,9 +94,10 @@
   import utils from "./lib/utils"
   import card from "./lib/numberCard"
   import lineChart from "./lib/lineChart"
+  import chartPie from "./lib/chartPie"
   
   export default {
-    components : {slider, tween, card, lineChart},
+    components : {slider, tween, card, lineChart, chartPie},
     mixins: [utils],
     data() {
       return {
@@ -125,6 +128,12 @@
       },
       overpay() {
         return this.total_payment - this.params.amount.val
+      },
+      pieChartSeries() {
+        return [this.overpay, this.params.amount.val]
+      },
+      pieLabels() {
+        return ["Overpay", "Principal"]
       },
       totalDebtSeries() {
         let arr = this.tableItems.filter((i,k) => k%12 == 0)
