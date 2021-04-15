@@ -33,8 +33,8 @@
         />
       </v-flex>
       <v-flex class="chart" xs11 md5>
-        <chartPie :series="pieChartSeries" :labels="pieLabels"/>
-        <lineChart title="loanT" :series="chartSeries"/> 
+        <chartPie :series="pieChartSeries" :labels="pieLabels" height="30%"/>
+        <lineChart title="loanT" :series="chartSeries" height="70%" /> 
 
       </v-flex>
 
@@ -205,7 +205,7 @@
 
 <style lang="scss">
 .chart {
-  min-height: 400px;
+  min-height: 600px;
 }
 
 td {

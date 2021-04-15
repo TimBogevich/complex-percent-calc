@@ -1,5 +1,5 @@
 <template>
-  <apexchart type="pie" width="70%" :options="chartOptions" :series="series"></apexchart>
+  <apexchart type="pie" :height="height" width="100%" :options="chartOptions" :series="series"></apexchart>
 </template>
 
 <script>
@@ -11,6 +11,10 @@ export default {
     },
     labels: {
       default: ['A']
+    },
+    height: {
+      type: String,
+      default: "100%"
     }
   },
   computed: {
