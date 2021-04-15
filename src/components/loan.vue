@@ -35,36 +35,52 @@
       <v-flex class="chart" xs11 md5>
         <lineChart title="loanT" :series="chartSeries"/>
       </v-flex>
-      <v-flex v-if="showMoreBtn" class="my-5" xs11 md7>
-        <v-data-table
-          :headers="headers"
-          :items="tableItems.slice(0,4)"
-          hide-default-footer
-          calculate-widths
-          class="elevation-1"
-        >
-        </v-data-table>
-        <v-btn text @click.once="showMoreBtn=!showMoreBtn" block >Show more</v-btn>
-        <v-data-table
-          :headers="headers"
-          :items="tableItems.slice(-4)"
-          hide-default-footer
-          hide-default-header
-          calculate-widths
-          class="elevation-1"
-        />
+
+      <v-flex class="my-5" xs11 md7>
+        <v-simple-table >
+          <template v-slot:default>
+            <thead>
+              <tr>
+                <th v-for="h in headers" :key="h.value" class="text-right">
+                  {{h.text}}
+                </th>
+              </tr>
+            </thead>
+            <tbody v-if="showMoreBtn">
+              <tr class="text-right" v-for="item in tableItems.slice(0,2)" :key="item.month">
+                <td>{{ item.month }}</td>
+                <td>{{ item.totalDebt }}</td>
+                <td>{{ item.interestsPayment }}</td>
+                <td>{{ item.debtPayment }}</td>
+                <td>{{ item.totalPayment }}</td>
+                <td>{{ item.paymentsAcc }}</td>
+              </tr>
+              <tr>
+                <v-btn text @click.once="showMoreBtn=!showMoreBtn" block >Show more</v-btn>
+              </tr>
+              <tr class="text-right" v-for="item in tableItems.slice(-2)" :key="item.month">
+                <td>{{ item.month }}</td>
+                <td>{{ item.totalDebt }}</td>
+                <td>{{ item.interestsPayment }}</td>
+                <td>{{ item.debtPayment }}</td>
+                <td>{{ item.totalPayment }}</td>
+                <td>{{ item.paymentsAcc }}</td>
+              </tr>
+            </tbody>
+            <tbody v-else>
+              <tr class="text-right" v-for="item in tableItems" :key="item.month">
+                <td>{{ item.month }}</td>
+                <td>{{ item.debtPayment }}</td>
+                <td>{{ item.totalDebt }}</td>
+                <td>{{ item.interestsPayment }}</td>
+                <td>{{ item.totalPayment }}</td>
+                <td>{{ item.paymentsAcc }}</td>
+              </tr>
+            </tbody>
+          </template>
+        </v-simple-table>
       </v-flex>
-      <v-flex v-else class="my-5" xs11 md7>
-        <v-data-table
-          :headers="headers"
-          :items="tableItems"
-          :items-per-page="9999"
-          
-          calculate-widths
-          hide-default-footer
-          class="elevation-1"
-        />
-      </v-flex>
+
     </v-row>
     
   </v-container>
@@ -183,6 +199,8 @@
   min-height: 400px;
 }
 
-
+td {
+  white-space: nowrap;
+}
 
 </style>
