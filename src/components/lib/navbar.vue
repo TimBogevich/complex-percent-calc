@@ -54,6 +54,7 @@
         return [
           { title: this.$t("compoundPercentT"), icon: 'mdi-chart-bell-curve', link: "/" },
           { title: this.$t("rentalIncomeT"), icon: 'mdi-numeric', link: "/rental_income" },
+          { title: this.$t("loanT"), icon: 'mdi-numeric', link: "/loan" },
         ]},
     }
   }

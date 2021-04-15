@@ -17,6 +17,12 @@ const routes = [
     meta: { title: "rentalIncome" },
   },
   {
+    path: '/loan',
+    name: 'Loan',
+    component: () => import(/* webpackChunkName: "about" */ '../components/loan.vue'),
+    meta: { title: "LoanCalculator" },
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting

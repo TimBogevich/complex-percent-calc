@@ -4,13 +4,16 @@
       <span >
         {{lbl}}
       </span>
+      <v-slot>
+        
+      </v-slot>
       <v-spacer></v-spacer>
       <currency-input
           :class="type=='money' ? 'inp currency' : 'inp percent'" 
           @keyup.enter.native="$event.target.blur()" 
           :currency="null"
           locale="de"
-          :precision="0" 
+          :precision="precision" 
           @change="$emit('update:vl', vl)" 
           v-model="vl"/>
     </v-row>
@@ -47,6 +50,10 @@
       max: {},
       step: {},
       type: {},
+      precision: {
+        type: Number,
+        default: 0
+      },
       lazy: {
         type: Boolean,
         default: true
@@ -85,7 +92,7 @@
    text-align: end !important;
  }
  .percent {
-   width: 40px;
+   width: 50px;
    text-align: end !important;
  }
 

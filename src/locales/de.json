@@ -25,5 +25,12 @@
   "ror": "Rendite pro Jahr",
   "compoundPercentT": "Zinseszins",
   "rentalIncomeT": "Mieteinnahmen",
-  "years": "jahre"
+  "years": "jahre",
+  "amount": "Menge",
+  "loanT": "Darlehen",
+  "long": "Dauer",
+  "mounthly_pay": "Monatliche Zahlung",
+  "rate": "Bewertung",
+  "total_overpay": "Total Überzahlung",
+  "total_pay": "Gesamtzahlungen"
 }
