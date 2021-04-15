@@ -5,7 +5,6 @@
       color="primary"
       dark
       src="https://picsum.photos/1920/1080?random"
-      scroll-target="#scrolling-techniques-2"
     >
       <template v-slot:img="{ props }">
         <v-img

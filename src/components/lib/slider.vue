@@ -4,9 +4,9 @@
       <span >
         {{lbl}}
       </span>
-      <v-slot>
-        
-      </v-slot>
+      <slot>
+
+      </slot>
       <v-spacer></v-spacer>
       <currency-input
           :class="type=='money' ? 'inp currency' : 'inp percent'" 
