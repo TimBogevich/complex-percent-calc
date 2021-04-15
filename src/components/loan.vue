@@ -105,7 +105,7 @@
       return {
         params: {
           amount:  { val : 5000000, min: 50000, max: 50000000, step: 10000, type: "money", precision: 0},
-          rate:  {val : 0.2, min: 0.1, max: 100, step: 0.05, type: "percentage", precision: 2},
+          rate:  {val : 4, min: 0.1, max: 100, step: 0.05, type: "percentage", precision: 2},
           long:  {val : 10, min: 1, max: 30, step: 1, type: "money", precision: 0},
         },
         showMoreBtn: true,
@@ -138,7 +138,7 @@
         return ["Overpay", "Principal"]
       },
       totalDebtSeries() {
-        let arr = this.tableItems.filter((i,k) => k%12 == 0)
+        let arr = this.tableItems.filter((i,k) => (k+1)%12 == 0)
         return arr.map(i => i.totalDebtNumber)
       },
       paymentsAccSeries() {
@@ -171,24 +171,24 @@
       },
       tableItems() {
         let data = []
-        let debtPayment = this.params.amount.val / (this.params.long.val * 12)
         let predebtPayment = this.params.amount.val
         let paymentsAcc = 0
+        let mntPayment = this.payment
         for (let month = 1; month <= this.params.long.val * 12; month++) {
           let interestsPayment =  predebtPayment * (this.params.rate.val / 12 / 100)
-          let totalPayment = debtPayment + interestsPayment
-          paymentsAcc += totalPayment
+          let debtPayment = mntPayment - interestsPayment
+          predebtPayment -= debtPayment
+          paymentsAcc += mntPayment
           let a = {
             month,
-            debtPayment: this.delimiter(debtPayment.toFixed(2), " "),
             totalDebt: this.delimiter(predebtPayment.toFixed(2), " "), 
-            totalDebtNumber: predebtPayment.toFixed(2), 
             interestsPayment: this.delimiter(interestsPayment.toFixed(2), " "), 
-            totalPayment: this.delimiter(totalPayment.toFixed(2), " "),
-            paymentsAccNumber: paymentsAcc,
+            debtPayment: this.delimiter(debtPayment.toFixed(2), " "),
+            totalPayment: this.delimiter(mntPayment.toFixed(2), " "),
             paymentsAcc: this.delimiter(paymentsAcc.toFixed(2), " "),
+            totalDebtNumber: predebtPayment.toFixed(2), 
+            paymentsAccNumber: paymentsAcc,
           }
-          predebtPayment -= debtPayment
           data.push(a)
         }
         return data
