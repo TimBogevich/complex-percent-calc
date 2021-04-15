@@ -64,7 +64,7 @@
       headers()  {
         return [
           { text: this.$t("year"), align: 'end', value: 'year'},
-          { text: this.$t("incomeMounth"), value: 'income', align: 'end'},
+          { text: this.$t("incomeMonth"), value: 'income', align: 'end'},
           { text: this.$t("expenses"), value: 'expenses', align: 'end'},
           { text: this.$t("profit"), value: 'profit', align: 'end'},
           { text: this.$t("currYearProfit"), value: 'currYearProfit', align: 'end'},

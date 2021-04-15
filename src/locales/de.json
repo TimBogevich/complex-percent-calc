@@ -5,7 +5,7 @@
   "expenses": "Ausgaben pro Monat",
   "growExpected": "Einkommenssteigerung pro Jahr, %",
   "income": "Einkommen pro Monat",
-  "incomeMounth": "Einkommen pro Monat",
+  "incomeMonth": "Einkommen pro Monat",
   "inflation": "Jährliche Inflation,%",
   "investPercentage": "Ihre Investitionsquote, %",
   "percentOnCurrentYearProfit": "% Auf das Kapital des laufenden Jahres",
@@ -29,7 +29,7 @@
   "amount": "Menge",
   "loanT": "Darlehen",
   "long": "Dauer",
-  "mounthly_pay": "Monatliche Zahlung",
+  "monthly_pay": "Monatliche Zahlung",
   "rate": "Bewertung",
   "total_overpay": "Total Überzahlung",
   "total_pay": "Gesamtzahlungen"

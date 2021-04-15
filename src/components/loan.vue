@@ -15,7 +15,7 @@
 
         <card 
         :v="payment"
-        text="mounthly_pay"
+        text="monthly_pay"
         delim=" "
         color="warning"
         :dark="true"
@@ -32,6 +32,39 @@
         delim=" "
         />
       </v-flex>
+      <v-flex class="chart" xs11 md5>
+        <lineChart title="loanT" :series="chartSeries"/>
+      </v-flex>
+      <v-flex v-if="showMoreBtn" class="my-5" xs11 md7>
+        <v-data-table
+          :headers="headers"
+          :items="tableItems.slice(0,4)"
+          hide-default-footer
+          calculate-widths
+          class="elevation-1"
+        >
+        </v-data-table>
+        <v-btn text @click.once="showMoreBtn=!showMoreBtn" block >Show more</v-btn>
+        <v-data-table
+          :headers="headers"
+          :items="tableItems.slice(-4)"
+          hide-default-footer
+          hide-default-header
+          calculate-widths
+          class="elevation-1"
+        />
+      </v-flex>
+      <v-flex v-else class="my-5" xs11 md7>
+        <v-data-table
+          :headers="headers"
+          :items="tableItems"
+          :items-per-page="9999"
+          
+          calculate-widths
+          hide-default-footer
+          class="elevation-1"
+        />
+      </v-flex>
     </v-row>
     
   </v-container>
@@ -42,9 +75,10 @@
   import tween from 'vue-tween-number'
   import utils from "./lib/utils"
   import card from "./lib/numberCard"
+  import lineChart from "./lib/lineChart"
   
   export default {
-    components : {slider, tween, card},
+    components : {slider, tween, card, lineChart},
     mixins: [utils],
     data() {
       return {
@@ -53,7 +87,7 @@
           rate:  {val : 0.2, min: 0.1, max: 100, step: 0.05, type: "percentage", precision: 2},
           long:  {val : 10, min: 1, max: 30, step: 1, type: "money", precision: 0},
         },
-      
+        showMoreBtn: true,
       }
     },
     computed: {
@@ -75,7 +109,65 @@
       },
       overpay() {
         return this.total_payment - this.params.amount.val
+      },
+      totalDebtSeries() {
+        let arr = this.tableItems.filter((i,k) => k%12 == 0)
+        return arr.map(i => i.totalDebtNumber)
+      },
+      paymentsAccSeries() {
+        let arr = this.tableItems.filter((i,k) => (k+1)%12 == 0)
+        return arr.map(i => i.paymentsAccNumber)
+      },
+      chartSeries() {
+        return [
+          {
+            name: this.$t("totalDebt"),
+            color: "#141619",
+            data: this.totalDebtSeries
+          },
+          {
+            name: this.$t("paymentsAcc"),
+            color: "#941319",
+            data: this.paymentsAccSeries
+          },
+        ]
+      },
+      headers() {
+        return [
+          {text: "Month",value: "month", align: "end"},
+          {text: "Total Debt",value: "totalDebt", align: "end"},
+          {text: "Interests",value: "interestsPayment", align: "end"},
+          {text: "Debt payment",value: "debtPayment", align: "end"},
+          {text: "Total monthly payment",value: "totalPayment", align: "end"},
+          {text: "Payments accumulated",value: "paymentsAcc", align: "end"},
+        ]
+      },
+      tableItems() {
+        let data = []
+        let debtPayment = this.params.amount.val / (this.params.long.val * 12)
+        let predebtPayment = this.params.amount.val
+        let paymentsAcc = 0
+        for (let month = 1; month <= this.params.long.val * 12; month++) {
+          let interestsPayment =  predebtPayment * (this.params.rate.val / 12 / 100)
+          let totalPayment = debtPayment + interestsPayment
+          paymentsAcc += totalPayment
+          let a = {
+            month,
+            debtPayment: this.delimiter(debtPayment.toFixed(2), " "),
+            totalDebt: this.delimiter(predebtPayment.toFixed(2), " "), 
+            totalDebtNumber: predebtPayment.toFixed(2), 
+            interestsPayment: this.delimiter(interestsPayment.toFixed(2), " "), 
+            totalPayment: this.delimiter(totalPayment.toFixed(2), " "),
+            paymentsAccNumber: paymentsAcc,
+            paymentsAcc: this.delimiter(paymentsAcc.toFixed(2), " "),
+          }
+          predebtPayment -= debtPayment
+          data.push(a)
+        }
+        return data
       }
+
+
     },
     methods: {
     },
