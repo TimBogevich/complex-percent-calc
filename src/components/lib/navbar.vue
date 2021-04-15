@@ -2,6 +2,7 @@
     <v-navigation-drawer
     v-model="navbar"
     app
+    touchless
     clipped
       temporary>
       <v-list-item>

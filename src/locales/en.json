@@ -28,8 +28,8 @@
   "years": "years",
   "mounthly_pay": "Mounthly payment",
   "loanT": "Loan",
-  "amount": "Amount",
-  "rate": "Rate",
+  "amount": "Loan amount",
+  "rate": "Interest Rate",
   "long": "Duration",
   "total_pay": "Total payments",
   "total_overpay": "Total overpayments"
