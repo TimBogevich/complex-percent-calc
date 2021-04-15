@@ -20,7 +20,7 @@ const routes = [
     path: '/loan',
     name: 'Loan',
     component: () => import(/* webpackChunkName: "about" */ '../components/loan.vue'),
-    meta: { title: "LoanCalculator" },
+    meta: { title: "loanCalculator" },
   },
   {
     path: '/about',

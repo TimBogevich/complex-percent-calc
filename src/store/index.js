@@ -15,6 +15,9 @@ const state = {
     {code :"en", name : "English", flag : "gb"},
     {code :"de", name : "Deutsch", flag : "de"},
     {code :"ru", name : "Русский", flag : "ru"},
+    {code :"es", name : "Español", flag : "es"},
+    {code :"fr", name : "Français", flag : "fr"},
+    {code :"zh", name : "한국어", flag : "cn"},
   ],
 }
 
