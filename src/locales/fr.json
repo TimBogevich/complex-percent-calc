@@ -32,5 +32,12 @@
   "rate": "Taux d'intérêt",
   "long": "Durée",
   "total_pay": "Total des paiements",
-  "total_overpay": "Total des trop-payés"
+  "total_overpay": "Total des trop-payés",
+  "interest": "Intérêt",
+  "month": "Mois",
+  "paymentsAcc": "Paiements accumulés",
+  "principal": "Principal",
+  "principalPayment": "Paiement principal",
+  "totalMonthlyPayment": "Paiement mensuel total",
+  "showMore": "Montre plus"
 }

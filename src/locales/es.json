@@ -32,5 +32,12 @@
   "rate": "Tasa de interés",
   "long": "Duración",
   "total_pay": "Pagos totales",
-  "total_overpay": "Pagos en exceso totales"
+  "total_overpay": "Pagos en exceso totales",
+  "interest": "Interesar",
+  "month": "Mes",
+  "paymentsAcc": "Pagos acumulados",
+  "principal": "Principal",
+  "principalPayment": "Pago principal",
+  "totalMonthlyPayment": "Pago mensual total",
+  "showMore": "Mostrar más"
 }

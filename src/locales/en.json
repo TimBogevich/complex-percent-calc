@@ -1,4 +1,5 @@
 {
+  "showMore": "Show more",
   "compoundPercent": "Compound interest calculator",
   "compoundPercentT": "Compound interest",
   "loanCalculator": "Loan calculator",
@@ -32,5 +33,11 @@
   "rate": "Interest Rate",
   "long": "Duration",
   "total_pay": "Total payments",
-  "total_overpay": "Total overpayments"
+  "total_overpay": "Total overpayments",
+  "month": "Month",
+  "principal": "Principal",
+  "interest": "Interest",
+  "principalPayment": "Principal payment",
+  "totalMonthlyPayment": "Total monthly payment",
+  "paymentsAcc": "Payments accumulated"
 }

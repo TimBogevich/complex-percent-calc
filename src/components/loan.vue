@@ -58,7 +58,9 @@
                 <td>{{ item.paymentsAcc }}</td>
               </tr>
               <tr>
-                <v-btn text @click.once="showMoreBtn=!showMoreBtn" block >Show more</v-btn>
+                <v-btn text @click.once="showMoreBtn=!showMoreBtn" block >
+                  {{$t("showMore")}}
+                </v-btn>
               </tr>
               <tr class="text-right" v-for="item in tableItems.slice(-2)" :key="item.month">
                 <td>{{ item.month }}</td>
@@ -72,9 +74,9 @@
             <tbody v-else>
               <tr class="text-right" v-for="item in tableItems" :key="item.month">
                 <td>{{ item.month }}</td>
-                <td>{{ item.debtPayment }}</td>
                 <td>{{ item.totalDebt }}</td>
                 <td>{{ item.interestsPayment }}</td>
+                <td>{{ item.debtPayment }}</td>
                 <td>{{ item.totalPayment }}</td>
                 <td>{{ item.paymentsAcc }}</td>
               </tr>
@@ -146,7 +148,7 @@
       chartSeries() {
         return [
           {
-            name: this.$t("totalDebt"),
+            name: this.$t("principal"),
             color: "#141619",
             data: this.totalDebtSeries
           },
@@ -159,12 +161,12 @@
       },
       headers() {
         return [
-          {text: "Month",value: "month", align: "end"},
-          {text: "Total Debt",value: "totalDebt", align: "end"},
-          {text: "Interests",value: "interestsPayment", align: "end"},
-          {text: "Debt payment",value: "debtPayment", align: "end"},
-          {text: "Total monthly payment",value: "totalPayment", align: "end"},
-          {text: "Payments accumulated",value: "paymentsAcc", align: "end"},
+          {text: this.$t("month"),value: "month", align: "end"},
+          {text: this.$t("principal"),value: "totalDebt", align: "end"},
+          {text: this.$t("interest"),value: "interestsPayment", align: "end"},
+          {text: this.$t("principalPayment"),value: "debtPayment", align: "end"},
+          {text: this.$t("totalMonthlyPayment"),value: "totalPayment", align: "end"},
+          {text:this.$t("paymentsAcc"),value: "paymentsAcc", align: "end"},
         ]
       },
       tableItems() {

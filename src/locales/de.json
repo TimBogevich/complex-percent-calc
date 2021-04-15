@@ -32,5 +32,12 @@
   "monthly_pay": "Monatliche Zahlung",
   "rate": "Bewertung",
   "total_overpay": "Total Überzahlung",
-  "total_pay": "Gesamtzahlungen"
+  "total_pay": "Gesamtzahlungen",
+  "interest": "Interesse",
+  "month": "Monat",
+  "paymentsAcc": "Zahlungen akkumuliert",
+  "principal": "Schulleiter",
+  "principalPayment": "Kapitalzahlung",
+  "totalMonthlyPayment": "Monatliche Gesamtzahlung",
+  "showMore": "Zeig mehr"
 }
