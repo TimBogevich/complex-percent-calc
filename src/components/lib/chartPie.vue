@@ -33,6 +33,20 @@ export default {
             }
           },
           colors: ['#cc807a', '#91c99b'],
+          stroke: {
+            width: 4
+          },
+          dataLabels: {
+            enabled: true,
+            style: {
+              colors: ['#111']
+            },
+            background: {
+              enabled: true,
+              foreColor: '#fff',
+              borderWidth: 0
+            }
+          },
           responsive: [{
             breakpoint: 480,
             options: {
