@@ -78,12 +78,10 @@
                   formatter: (val) => this.delimiter(val.toFixed(0), " ") ,
                 },
               },
-              markers: {
-                colors: ['#ff0000', '#ff0000', '#ff0000']
-              },
+
               theme: {
                   monochrome: {
-                      enabled: true,
+                      enabled: false,
                       color: '#e24d42',
                   },
               }

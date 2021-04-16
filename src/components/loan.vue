@@ -152,12 +152,12 @@
         return [
           {
             name: this.$t("principal"),
-            color: "#141619",
+            color: "#91c99b",
             data: this.totalDebtSeries
           },
           {
             name: this.$t("paymentsAcc"),
-            color: "#941319",
+            color: "#cc807a",
             data: this.paymentsAccSeries
           },
         ]
