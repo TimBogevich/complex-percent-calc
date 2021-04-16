@@ -135,7 +135,7 @@
         return [this.overpay, this.params.amount.val]
       },
       pieLabels() {
-        return ["Overpay", "Principal"]
+        return [this.$t("interest"), this.$t("principal")]
       },
       totalDebtSeries() {
         let arr = this.tableItems.filter((i,k) => (k+1)%12 == 0)

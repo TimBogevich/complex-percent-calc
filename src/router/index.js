@@ -23,6 +23,12 @@ const routes = [
     meta: { title: "loanCalculator" },
   },
   {
+    path: '/ipo_calendar',
+    name: 'ipoCalendar',
+    component: () => import(/* webpackChunkName: "about" */ '../components/ipo.vue'),
+    meta: { title: "ipoT" },
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting

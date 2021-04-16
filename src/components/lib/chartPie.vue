@@ -3,7 +3,10 @@
 </template>
 
 <script>
+import utils from "./utils"
+
 export default {
+  mixins: [utils],
   props: {
     series: {
       type: Array,
@@ -21,19 +24,23 @@ export default {
     chartOptions() {
       return {
           chart: {
-            width: 380,
             type: 'pie',
           },
           labels: this.labels,
+          tooltip: {
+            y: {
+                formatter: (v) => this.delimiter(v.toFixed(0), " ")
+            }
+          },
           colors: ['#cc807a', '#91c99b'],
           responsive: [{
             breakpoint: 480,
             options: {
               chart: {
-                width: 200
+                width: 300
               },
               legend: {
-                position: 'bottom'
+                position: 'right'
               }
             }
           }]

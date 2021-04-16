@@ -39,5 +39,6 @@
   "interest": "Interest",
   "principalPayment": "Principal payment",
   "totalMonthlyPayment": "Total monthly payment",
-  "paymentsAcc": "Payments accumulated"
+  "paymentsAcc": "Payments accumulated",
+  "ipoT": "IPO Calendar"
 }
