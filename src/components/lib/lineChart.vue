@@ -56,7 +56,7 @@
                     formatter: (val) => this.$t("year") + val,
                 },
                 y: {
-                    formatter: (seriesName) => this.delimiter(seriesName),
+                    formatter: (seriesName) => this.delimiter(seriesName.toFixed(0), " "),
                     title: {
                         formatter: (seriesName) => seriesName,
                     },
@@ -68,13 +68,14 @@
                     text: this.$t("year"),
                 },
                 labels: {
+                  formatter: (val) => val ,
                   style: {
                   },
                 }
               },
               yaxis: {
                 labels: {
-                  formatter: (val) => (val) ,
+                  formatter: (val) => this.delimiter(val.toFixed(0), " ") ,
                 },
               },
               markers: {
