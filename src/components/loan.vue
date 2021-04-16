@@ -58,9 +58,12 @@
                 <td>{{ item.paymentsAcc }}</td>
               </tr>
               <tr>
-                <v-btn text @click.once="showMoreBtn=!showMoreBtn" block >
-                  {{$t("showMore")}}
-                </v-btn>
+                <td colspan="6" >
+                  <v-btn   text @click.once="showMoreBtn=!showMoreBtn" block >
+                    {{$t("showMore")}}
+                  </v-btn>
+
+                </td>
               </tr>
               <tr class="text-right" v-for="item in tableItems.slice(-2)" :key="item.month">
                 <td>{{ item.month }}</td>
