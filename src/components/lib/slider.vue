@@ -9,10 +9,11 @@
       </slot>
       <v-spacer></v-spacer>
       <currency-input
+          :distraction-free="false"
           :class="type=='money' ? 'inp currency' : 'inp percent'" 
           @keyup.enter.native="$event.target.blur()" 
           :currency="null"
-          locale="de"
+          locale="sv"
           :precision="precision" 
           @change="$emit('update:vl', vl)" 
           v-model="vl"/>

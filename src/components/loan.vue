@@ -205,7 +205,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scope>
 .chart {
   min-height: 600px;
 }

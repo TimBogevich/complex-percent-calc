@@ -32,7 +32,7 @@
 <script>
   import slider from "./lib/slider"
 
-  const delimiter = (val) => val.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
+  const delimiter = (val) => val.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')
 
   
   export default {
@@ -200,6 +200,8 @@
   min-height: 400px;
 }
 
-
+td {
+  white-space: nowrap;
+}
 
 </style>
