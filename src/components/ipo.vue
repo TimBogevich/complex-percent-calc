@@ -12,23 +12,37 @@
           <v-card
           v-for="item in iposSelected"
           :key="item.symbol"
-            class="mx-auto"
-            width="100%"
+          class="my-1 pa-4"
+          width="100%"
           >
             <v-card-text>
-              <p class="display-1 text--primary">
-                {{item.name}}
-              </p>
-              <p>
-                
-              </p>
-              <div class="text--primary">
-                {{item.symbol}}
-              </div>
+              <v-row>
+                <v-flex xs7>
+                  <p class="display-1 text--primary">
+                    {{item.name}}
+                  </p>
+                  <p>
+                    
+                  </p>
+                  <div class="text--primary">
+                    {{item.symbol}}
+                  </div>
+                </v-flex>
+                <v-spacer></v-spacer>
+                <v-flex xs3>
+                  <h1 v-if="item.price">
+                    {{item.price}} $
+                  </h1>
+                  <h2 v-else>
+                    no price
+                  </h2>
+                </v-flex>
+              </v-row>
             </v-card-text>
             <v-card-actions>
               <v-btn
                 text
+                disabled
                 color="deep-purple accent-4"
               >
                 Learn More
