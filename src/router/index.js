@@ -23,6 +23,18 @@ const routes = [
     meta: { title: "loanCalculator" },
   },
   {
+    path: '/fixflip',
+    name: 'FixAndFlip',
+    component: () => import(/* webpackChunkName: "about" */ '../components/fixFlip.vue'),
+    meta: { title: "fixAndFlipT" },
+  },
+  {
+    path: '/mortgage',
+    name: 'Mortgage',
+    component: () => import(/* webpackChunkName: "about" */ '../components/mortgage.vue'),
+    meta: { title: "mortgageT" },
+  },
+  {
     path: '/ipo_calendar',
     name: 'ipoCalendar',
     component: () => import(/* webpackChunkName: "about" */ '../components/ipo.vue'),

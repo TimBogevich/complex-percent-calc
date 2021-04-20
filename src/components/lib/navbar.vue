@@ -55,7 +55,9 @@
         return [
           { title: this.$t("compoundPercentT"), icon: 'mdi-chart-bell-curve', link: "/" },
           { title: this.$t("rentalIncomeT"), icon: 'mdi-numeric', link: "/rental_income" },
+          { title: this.$t("fixAndFlipT"), icon: 'mdi-numeric', link: "/fixFlip" },
           { title: this.$t("loanT"), icon: 'mdi-numeric', link: "/loan" },
+          { title: this.$t("mortgageT"), icon: 'mdi-numeric', link: "/mortgage", },
           { title: this.$t("ipoT"), icon: 'mdi-calendar', link: "/ipo_calendar" },
         ]},
     }

@@ -40,5 +40,15 @@
   "principalPayment": "Paiement principal",
   "totalMonthlyPayment": "Paiement mensuel total",
   "showMore": "Montre plus",
-  "ipoT": "Calendrier IPO"
+  "ipoT": "Calendrier IPO",
+  "mortgageT": "Hypothèque",
+  "RorPerMonth": "Retour sur investissement par mois",
+  "RorPerYear": "Retour sur investissement par an",
+  "dateEnd": "Date de vente",
+  "dateStart": "Acheter date",
+  "fixAndFlipT": "Réparer et retourner",
+  "rateOfReturn": "Taux de retour",
+  "repairExpenses": "Frais de réparation",
+  "returnOfInvestments": "Retour sur investissement",
+  "sellPrice": "Prix de vente"
 }

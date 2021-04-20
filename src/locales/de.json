@@ -40,5 +40,15 @@
   "principalPayment": "Kapitalzahlung",
   "totalMonthlyPayment": "Monatliche Gesamtzahlung",
   "showMore": "Zeig mehr",
-  "ipoT": "IPO-Kalender"
+  "ipoT": "IPO-Kalender",
+  "mortgageT": "Hypothek",
+  "RorPerMonth": "Kapitalrendite pro Monat",
+  "RorPerYear": "Kapitalrendite pro Jahr",
+  "dateEnd": "Verkaufsdatum",
+  "dateStart": "Kaufdatum",
+  "fixAndFlipT": "Fix & Flip",
+  "rateOfReturn": "Rendite",
+  "repairExpenses": "Reparaturkosten",
+  "returnOfInvestments": "Kapitalrendite",
+  "sellPrice": "Verkaufspreis"
 }

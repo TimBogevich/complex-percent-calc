@@ -17,7 +17,7 @@
       class="font-weight-black text-xl-h4"
       :duration='500'
         :value='v'
-        :formatter='val => delimiter(val.toFixed(digits), delim)'>
+        :formatter='val => delimiter(val.toFixed(digits), delim) + appendVal '>
         </tween>
     </v-list-item>
   </v-card>
@@ -45,6 +45,10 @@
         type: Number,
         default: 0
 
+      },
+      appendVal: {
+        type: String,
+        default: "",
       }
     },
     components: {tween},

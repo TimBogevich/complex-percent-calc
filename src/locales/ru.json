@@ -40,5 +40,15 @@
   "principalPayment": "Платеж по основному долгу",
   "totalMonthlyPayment": "Итого ежемесячный платеж",
   "showMore": "Показать больше",
-  "ipoT": "Календарь IPO"
+  "ipoT": "Календарь IPO",
+  "mortgageT": "Ипотечный кредит",
+  "RorPerMonth": "Возврат инвестиций в месяц",
+  "RorPerYear": "Возврат инвестиций в год",
+  "dateEnd": "Дата продажи",
+  "dateStart": "Дата покупки",
+  "fixAndFlipT": "Исправить и перевернуть",
+  "rateOfReturn": "Норма прибыли",
+  "repairExpenses": "Расходы на ремонт",
+  "returnOfInvestments": "Возврат инвестиций",
+  "sellPrice": "Цена продажи"
 }

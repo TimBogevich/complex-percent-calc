@@ -40,5 +40,15 @@
   "principalPayment": "本金支付",
   "totalMonthlyPayment": "每月总付款",
   "showMore": "展示更多",
-  "ipoT": "IPO日历"
+  "ipoT": "IPO日历",
+  "mortgageT": "抵押",
+  "RorPerMonth": "每月投资回报",
+  "RorPerYear": "每年的投资回报",
+  "dateEnd": "出售日期",
+  "dateStart": "购买日期",
+  "fixAndFlipT": "固定和翻转",
+  "rateOfReturn": "回报率",
+  "repairExpenses": "维修费用",
+  "returnOfInvestments": "投资回报",
+  "sellPrice": "卖价"
 }

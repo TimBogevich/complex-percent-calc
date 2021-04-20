@@ -40,5 +40,15 @@
   "principalPayment": "Principal payment",
   "totalMonthlyPayment": "Total monthly payment",
   "paymentsAcc": "Payments accumulated",
-  "ipoT": "IPO Calendar"
+  "ipoT": "IPO Calendar",
+  "mortgageT": "Mortgage",
+  "dateStart": "Buy date",
+  "dateEnd": "Sell date",
+  "sellPrice": "Sell price",
+  "repairExpenses": "Repair expenses",
+  "returnOfInvestments": "Return of investment",
+  "rateOfReturn": "Rate of return",
+  "RorPerMonth": "Return of investment per month",
+  "RorPerYear": "Return of investment per year",
+  "fixAndFlipT": "Fix & Flip"
 }

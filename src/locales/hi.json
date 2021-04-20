@@ -40,5 +40,15 @@
   "principalPayment": "मूलधन का भुगतान",
   "totalMonthlyPayment": "कुल मासिक भुगतान",
   "showMore": "और दिखाओ",
-  "ipoT": "आईपीओ कैलेंडर"
+  "ipoT": "आईपीओ कैलेंडर",
+  "mortgageT": "बंधक",
+  "RorPerMonth": "प्रति माह निवेश का रिटर्न",
+  "RorPerYear": "प्रति वर्ष निवेश का प्रतिफल",
+  "dateEnd": "बेचने की तारीख",
+  "dateStart": "दिनांक खरीदें",
+  "fixAndFlipT": "फिक्स और फ्लिप",
+  "rateOfReturn": "प्रतिफल दर",
+  "repairExpenses": "मरम्मत का खर्च",
+  "returnOfInvestments": "निवेश की वापसी",
+  "sellPrice": "विक्रय मूल्य"
 }

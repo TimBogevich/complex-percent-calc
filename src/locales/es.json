@@ -40,5 +40,15 @@
   "principalPayment": "Pago principal",
   "totalMonthlyPayment": "Pago mensual total",
   "showMore": "Mostrar más",
-  "ipoT": "Calendario de OPI"
+  "ipoT": "Calendario de OPI",
+  "mortgageT": "Hipoteca",
+  "RorPerMonth": "Retorno de la inversión por mes",
+  "RorPerYear": "Retorno de la inversión por año",
+  "dateEnd": "Fecha de venta",
+  "dateStart": "Fecha de compra",
+  "fixAndFlipT": "Arreglar y voltear",
+  "rateOfReturn": "Tasa de retorno",
+  "repairExpenses": "Gastos de reparación",
+  "returnOfInvestments": "Retorno de la inversión",
+  "sellPrice": "Precio de venta"
 }
