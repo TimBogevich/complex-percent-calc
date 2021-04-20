@@ -46,7 +46,7 @@
     computed: {
       labels() {
         return {
-            income : this.$t("income"),
+            income : this.$t("incomeMonth"),
             capital : this.$t("capital"),
             avgIncome : this.$t("avgIncome"),
             avgIncomeRegion : this.$t("avgIncomeRegion"),

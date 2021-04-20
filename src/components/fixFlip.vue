@@ -23,8 +23,8 @@
 
 
         <card 
-        :v="returnOfInvestments"
-        text="returnOfInvestments"
+        :v="Income"
+        text="income"
         delim=" "
         color="warning"
         :dark="true"
@@ -105,7 +105,7 @@
       RorPerYear() {
         return this.RorPerMonth * 12
       },
-      returnOfInvestments() {
+      Income() {
         return this.params.sellPrice.val - (this.params.house_price.val + this.params.repairExpenses.val)
       },
       durationMonth() {

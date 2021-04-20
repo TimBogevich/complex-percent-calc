@@ -1,7 +1,7 @@
 {
   "compoundPercent": "Калькулятор сложного процента",
   "startCapital": "Стартовый капитал",
-  "income": "Доходы в месяц",
+  "income": "Доход",
   "expenses": "Расходы в месяц ",
   "growExpected": "Прирост доходов в год, %",
   "investPercentage": "Ставка ваших инвестиций, %",
@@ -47,7 +47,7 @@
   "dateEnd": "Дата продажи",
   "dateStart": "Дата покупки",
   "fixAndFlipT": "Перепродажа недвижимости",
-  "rateOfReturn": "Норма прибыли",
+  "rateOfReturn": "Доход в процентах",
   "repairExpenses": "Расходы на ремонт",
   "returnOfInvestments": "Возврат инвестиций",
   "sellPrice": "Цена продажи"
