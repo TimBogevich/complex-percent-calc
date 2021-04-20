@@ -3,7 +3,9 @@
     ref="menu"
     v-model="menu"
     transition="scale-transition"
-    offset-y
+    bottom
+    left
+    offset-y="20"
     max-width="290px"
     min-width="auto"
   >
