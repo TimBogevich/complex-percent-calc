@@ -1,6 +1,6 @@
 <template>
   <v-container grid-list-xs>
-    <v-row class="mt-5 justify-center">
+    <v-row class="mt-5 mb-2 justify-center">
       <v-flex class="justify-center" xs11 md4>
         <slider 
         v-for="(item, i) in params" :key="i"

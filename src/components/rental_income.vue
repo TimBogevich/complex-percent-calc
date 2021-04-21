@@ -12,47 +12,21 @@
         :vl.sync="item.val"
         :lazy="false"/>
 
-        <v-card
-        class="mt-5"
-          max-width="100%"
-          outlined
-        >
-          <v-list-item three-line>
-            <v-list-item-content>
-              <v-list-item-title class="title-1 mb-1">
-                {{$t("ror")}}
-              </v-list-item-title>
-            </v-list-item-content>
+        <card 
+        :v="roi"
+        text="ror"
+        delim=" "
+        color="warning"
+        :dark="true"
+        appendVal=" %"
+        />
+        <card 
+        :v="return_of_inv"
+        text="roi"
+        delim=" "
+        :appendVal='" " + $t("years")'
+        />
 
-            <tween
-            class="font-weight-black text-xl-h4"
-            :duration='1000'
-             :value='roi'
-             :formatter='val => val.toFixed(2) + " %"'>
-              {{roi}}
-             </tween>
-          </v-list-item>
-        </v-card>
-        <v-card
-        class="mt-4"
-          max-width="100%"
-          outlined
-        >
-          <v-list-item three-line>
-            <v-list-item-content>
-              <v-list-item-title class="title-1 mb-1">
-                {{$t("roi")}}
-              </v-list-item-title>
-            </v-list-item-content>
-
-            <tween
-            class="font-weight-black text-xl-h4"
-            :duration='1000'
-             :value='return_of_inv'
-             :formatter='val => val.toFixed(1) + " " + $t("years") '>
-             </tween>
-          </v-list-item>
-        </v-card>
       </v-flex>
     </v-row>
   </v-container>
@@ -60,13 +34,13 @@
 
 <script>
   import slider from "./lib/slider"
-  import tween from 'vue-tween-number'
+  import card from "./lib/numberCard"
 
   const delimiter = (val) => val.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
 
   
   export default {
-    components : {slider, tween},
+    components : {slider, card},
     data() {
       return {
         params: {
